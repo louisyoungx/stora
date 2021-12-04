@@ -4,11 +4,11 @@ from .reactive import Reactive
 
 
 class Storage(object):
-    def __init__(self, state={}, filename="state.json", filepath=os.getcwd()):
+    def __init__(self, state={}, filename="state.json", filepath=os.getcwd(), force=False):
         self.path = filepath
         self.file = f'{filepath}/{filename}'
 
-        if state == {} and not self.load():
+        if not self.load() or force:
             self.state = Reactive(state, self.save)
             self.save()
 
