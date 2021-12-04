@@ -4,7 +4,7 @@
 **Stora** is a simple, reactive local storage library.
 
 ```python
->>> import stora
+>>> from stora import stora
 >>> apple = {"name": "Apple", "price": "10", "size": "small"}
 >>> s = stora(apple)
 >>> s.state
