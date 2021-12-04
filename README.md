@@ -16,11 +16,11 @@
 '{"name": "Apple", "price": "10", "size": "middle"}'
 ```
 
-Stora allows you to save dict to local as json extremely easily. There’s no need to manually open file and read, or save file after change your data — but nowadays,  just editor the state, and stora will automatically save for you!
+Stora allows you to save dict to local as json extremely easily. There’s no need to manually open file and read, or save file after change your dict data — but nowadays,  just editor the state, and stora will automatically save for you!
 
 Stora is a new Python package, welcome issue and pull request.
 
-## Installing stora and Supported Versions
+## Installing Stora and Supported Versions
 
 Stora is available on PyPI:
 
