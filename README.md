@@ -125,16 +125,11 @@ s1 = stora(apple, force=True) # force an overwrite
 s2 = stora(apple, filename='apple-10.json') # define a new stora with different filename or filepath
 ```
 
-
 ## API Reference and User Guide available on [Read the Docs](#)
 
 Coming soon.
 
 ## Cloning the repository
-
-When cloning the Requests repository, you may need to add the `-c
-fetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit (see
-[this issue](https://github.com/psf/requests/issues/2690) for more background):
 
 ```shell
 git clone https://github.com/louisyoungx/stora.git
