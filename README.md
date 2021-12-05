@@ -42,6 +42,89 @@ Stora is ready for simple data storage.
 - Customize the save directory.
 - Save format is *json* by default.
 - Read format is *dict* by default.
+- TODO Save files asynchronously
+- TODO Debounce function
+
+## Quick Start
+
+Stora will save data as `state.json` in **current working directory**.
+
+```python
+from stora import stora
+apple = {"name": "Apple", "price": "10", "size": "small"}
+s = stora(apple)
+print(s.state) # {"name": "Apple", "price": "10", "size": "small"}
+```
+
+> **PS:** *You can also decide the filename and filepath.*
+> ```python
+> s = stora(apple, filename='apple.json', filepath='~/.data/')
+> ```
+
+Now open `state.json`, you will see:
+```json
+{
+    "name": "Apple",
+    "price": "10",
+    "size": "small"
+}
+```
+
+Next time when you initialize a stora class in the same working directory, Stora will search if there is a file called `state.json`, if it exists it will load it and return a reactive dict.
+
+```python
+from stora import stora
+s = stora()    # Stora will
+print(s.state) # {"name": "Apple", "price": "10", "size": "small"}
+```
+
+> **PS:** If the filename and filepath are specified, use the following code to initialize it.
+>
+> ```python
+> s = stora(filename='apple.json', filepath='~/.data/')
+> ```
+
+Fetching and assignment operations are exactly the same as dict.
+
+```python
+# Fetching
+print(s.state['name']) # Apple
+print(s.state['price']) # 10
+# Assignment
+s.state['name'] = 'Banana'
+s.state['price'] = 20
+```
+
+Now you will see that the contents of the `state.json` have changed.
+
+```json
+{
+    "name": "Banana",
+    "price": "20",
+    "size": "small"
+}
+```
+
+Here's a feature that may cause confusion. If initialize stora again,
+
+```python
+from stora import stora
+apple = {"name": "Apple", "price": "10", "size": "small"}
+s = stora(apple)
+print(s.state) # {"name": "Banana", "price": "20", "size": "small"}
+```
+
+run `print(s.state)`, you will find the data is not what you assign to stora, it's data saved in `state.json` .
+
+That's because stora sets the data already read under the current filepath and filename to a higher priority in order to prevent data loss.
+
+You can force an overwrite of the stora state, or define a new stora with different filename or filepath.
+
+```python
+s1 = stora(apple, force=True) # force an overwrite
+s2 = stora(apple, filename='apple-10.json') # define a new stora with different filename or filepath
+```
+
 
 ## API Reference and User Guide available on [Read the Docs](#)
 
