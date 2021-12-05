@@ -5,6 +5,8 @@ from .reactive import Reactive
 
 class Storage(object):
     def __init__(self, state={}, filename="state.json", filepath=os.getcwd(), force=False):
+        if filepath[-1] == '/':
+            filepath += '/'
         self.path = filepath
         self.file = f'{filepath}/{filename}'
 
