@@ -1,5 +1,5 @@
 
-# Stora
+# Stora [![Visits][visits-badge]](github-page)[![Version][version-badge]][version-link][![MIT License][license-badge]](LICENSE.md)
 
 **Stora** is a simple, reactive local storage library.
 
@@ -134,3 +134,11 @@ Coming soon.
 ```shell
 git clone https://github.com/louisyoungx/stora.git
 ```
+
+
+
+[github-page]: https://github.com/louisyoungx/stora
+[version-badge]:   https://img.shields.io/pypi/v/stora.svg?label=version
+[version-link]:    https://pypi.python.org/pypi/stora/
+[license-badge]:   https://img.shields.io/badge/license-MIT-007EC7.svg
+[visits-badge]: https://badges.pufler.dev/visits/louisyoungx/stora
