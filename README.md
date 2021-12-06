@@ -1,5 +1,5 @@
 
-# Stora [![Visits][visits-badge]](github-page)[![Version][version-badge]][version-link][![MIT License][license-badge]](LICENSE.md)
+# Stora  [![Visits][visits-badge]](github-page) [![Version][version-badge]][version-link] [![MIT License][license-badge]](LICENSE.md)
 
 **Stora** is a simple, reactive local storage library.
 
