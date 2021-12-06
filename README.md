@@ -16,7 +16,7 @@
 '{"name": "Apple", "price": "10", "size": "middle"}'
 ```
 
-Stora allows you to save dict to local as json extremely easily. There’s no need to manually open file and read, or save file after change your dict data — but nowadays,  just editor the state, and stora will automatically save for you!
+Stora allows you to save dict to local as json extremely easily. There’s no need to manually open file and read, or save file after change your dict data — but nowadays,  just editor the state, and Stora will automatically save for you!
 
 Stora is a new Python package, welcome issue and pull request.
 
@@ -74,7 +74,7 @@ Next time when you initialize a stora class in the same working directory, Stora
 
 ```python
 from stora import stora
-s = stora()    # Stora will
+s = stora()    # Stora will search state.json and load it
 print(s.state) # {"name": "Apple", "price": "10", "size": "small"}
 ```
 
