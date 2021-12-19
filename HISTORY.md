@@ -1,6 +1,12 @@
 Release History
 ===============
 
+0.0.3 (2021-12-19)
+-------------------
+**Feature**
+
+- Added type hints (Dylan Tintenfich <tintenfichdylan@gmail.com>)
+
 0.0.2 (2021-12-06)
 -------------------
 **Improvements**
